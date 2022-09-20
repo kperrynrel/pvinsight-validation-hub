@@ -1,4 +1,6 @@
-system_id,name,latitude,longitude,public,timezone
-4,Sanyo1,39.7406,-105.1774,TRUE,Etc/GMT+7
-1201,Distributed Sun - 5 Executive Campus,39.9283,-75.0481,TRUE,America/New_York
-1332,NREL Parking Garage,39.7388,-105.1732,TRUE,Etc/GMT+7
+power_stream,system_id,name,latitude,longitude,public,timezone
+4_ac_power__315,4,Sanyo1,39.7406,-105.1774,TRUE,Etc/GMT+7
+1201_ac_power_hw__2801,1201,Distributed Sun - 5 Executive Campus,39.9283,-75.0481,TRUE,America/New_York
+1332_inv1_ac_power__2642,1332,NREL Parking Garage,39.7388,-105.1732,TRUE,Etc/GMT+7
+1332_inv2_ac_power__2646,1332,NREL Parking Garage,39.7388,-105.1732,TRUE,Etc/GMT+7
+1332_inv3_ac_power__2650,1332,NREL Parking Garage,39.7388,-105.1732,TRUE,Etc/GMT+7

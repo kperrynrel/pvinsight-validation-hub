@@ -1,5 +1,5 @@
 """
-Script for function that estimates azimuth and tilt.
+Script for PVAnalytics function/pipeline that estimates azimuth and tilt.
 """
 
 # This script acts as a function for running the az-tilt algorithm.
