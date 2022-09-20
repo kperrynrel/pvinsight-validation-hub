@@ -74,7 +74,7 @@ def run_az_tilt_estimation(time_series, latitude, longitude, time_zone):
     # 3) Removal of negative data
     # 4) Removal of data periods with low data 'completeness'
     # 5) Removal of outliers via Hampel + z-score outlier filters
-    # 6) Removalof clipped values via clipping filter
+    # 6) Removal of clipped values via clipping filter
     # 7) Filter to daytime clearsky data only, as determined by PSM3
     # Detect any data shifts and remove them
     time_series_daily = time_series.resample('D').sum()
