@@ -35,8 +35,9 @@ def run_az_tilt_estimation(time_series, latitude, longitude, time_zone):
     # Correct for timezone (localize + remove DST if present)
     time_series.index = time_series.index.tz_localize(
         time_zone, ambiguous=True, nonexistent="shift_forward")
-    time_series.index = time_series.index.tz_convert(
-        tz_conversion_dict[time_zone])
+    if time_zone in list(tz_conversion_dict.keys()):
+        time_series.index = time_series.index.tz_convert(
+            tz_conversion_dict[time_zone])
     time_series = time_series.drop_duplicates()
     # Pull the PSM3 data down that is associated with the system via pvlib
     psm3s = []
@@ -83,7 +84,6 @@ def run_az_tilt_estimation(time_series, latitude, longitude, time_zone):
     time_series = time_series[start_date:end_date]
     # Trim based on frozen data values
     stale_data_mask = gaps.stale_values_diff(time_series)
-    time_series = time_series.asfreq('15T')
     time_series = time_series[~stale_data_mask]
     time_series = time_series.asfreq('15T')
     # Remove negative data
